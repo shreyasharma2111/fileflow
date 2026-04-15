@@ -1,0 +1,7 @@
+-Helped draft backlog items: You are an experienced software project manager. Create a simple list of tasks in order for a Python command-line tool called FileFlow that scans a folder, validates filenames, sorts valid files, quarantines invalid ones, logs actions and generates a report. Please present it as a numbered list, with one short sentence per task.
+
+-Helped draft acceptable criteria: You are an experienced software project manager. Write acceptance criteria for a FileFlow feature that validates filenames. Valid files must be lowercase, use underscores between words, start with a date in YYYY-MM-DD format and have a valid extention present. Please present it as a list with short sentences per requirement
+
+-Helped draft possible file classification rules: You are an experienced software project manager. Suggest file classification rules for FileFlow. Files will be invoices, reports, meeting notes, images and exports, identified by keywords in their filename or extentions. Please present it as a simple table with three colums: File Type, Keywords and extentions
+
+-Helped draft a starter project structure: You are an experienced software project manager.
