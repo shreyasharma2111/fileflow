@@ -4,4 +4,8 @@
 
 -Helped draft possible file classification rules: You are an experienced software project manager. Suggest file classification rules for FileFlow. Files will be invoices, reports, meeting notes, images and exports, identified by keywords in their filename or extentions. Please present it as a simple table with three colums: File Type, Keywords and extentions
 
--Helped draft a starter project structure: You are an experienced software project manager.
+-Helped draft a starter project structure: You are an experienced software project manager. Suggest a starter Python project structure for FileFlow. Include only the essesntial files needed to begin building. present it as a folder tree, with a short sentece describing what each file does
+
+-Helped formulate a regualr expression to check validation of a file name: i want to use a regular expression to help with my code for validating the file name. what would be the expression to make sure the filename must begin with a date in the exact format YYYY-MM-DD followed by an underscore
+
+-Helped generate fake file names for testing purposes:can you please generate some fake file names based on the requirements above that will pass validation and some that will fail for me to test the code
