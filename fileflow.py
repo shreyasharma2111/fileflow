@@ -2,11 +2,12 @@ import os
 from unicodedata import category
 from validator import validatefilename
 from mover import movefile
-from logs import logaction
+from logs import logaction, log_reader
 from config_loader import loadconfig
 from classify import classify_file
 from summary import generate_summary
 from archive import archived_files
+from datetime import datetime
 
 input_folder = 'input'
 processed_folder = 'processed'
@@ -125,6 +126,10 @@ if __name__ == '__main__':
         exit()
 
     input_folder = config.get('input_folder')
+
+    #make it easier to read logs
+    log_reader(config['log_folder'], message=f"New fileflow run started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
     files = checkfolder(input_folder)
     print(f'Found {len(files)} files in {input_folder} folder.')
     processfiles(files, config)
@@ -137,3 +142,6 @@ if __name__ == '__main__':
         config['archive_after_days']
         
     )
+
+    log_reader(config['log_folder'], message=f"Fileflow run completed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
