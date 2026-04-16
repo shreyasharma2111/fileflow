@@ -1,0 +1,15 @@
+Config has been loaded
+Found 1 files in input folder.
+Invalid file: 2016-08-30_Summer_meeting_notes.doc moved to quarantine
+---Summary---
+Total files processed: 1
+Valid files: 0
+Invalid files: 1s
+Traceback (most recent call last):
+  File "/app/fileflow.py", line 127, in <module>
+    processfiles(files, config)
+  File "/app/fileflow.py", line 113, in processfiles
+    summary_file = generate_summary(valid_files, invalid_files, summary_folder)
+  File "/app/summary.py", line 28, in generate_summary
+    writer.writerow([file_info[filename],
+NameError: name 'filename' is not defined

@@ -18,17 +18,17 @@ def generate_summary(valid_files, invalid_files, summary_folder):
         writer.writerow(['Filename', 'Status', 'Category', 'Destination'])
         #write valid files
         for file_info in valid_files:
-            writer.writerow([file_info[filename],
+            writer.writerow([file_info['filename'],
                              'Valid', 
-                             file_info[category], 
-                             file_info[destination]
+                             file_info['category'], 
+                             file_info['destination']
                             ])
         #write invalid files
         for file_info in invalid_files:
-            writer.writerow([file_info[filename],
+            writer.writerow([file_info['filename'],
                              'Invalid', 
                              'Quarantine', 
-                             file_info[destination]
+                             file_info['destination']
                             ])
         #separate data from summary
         writer.writerow([])
@@ -38,6 +38,6 @@ def generate_summary(valid_files, invalid_files, summary_folder):
         writer.writerow([f"Valid files: {len(valid_files)}"])
         writer.writerow([f"Invalid files: {len(invalid_files)}"])  
     
-    print(f"Summary: {summary_file}")
+    print(f"Summary report saved to the Summary folder: {summary_file}")
 
     return summary_file
