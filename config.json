@@ -5,6 +5,7 @@
     "archive_folder": "archive",
     "log_folder": "logs",
     "summary_folder": "summary",
+    "archive_after_days": 180,
     "allowedextensions": [".jpg", ".txt", ".pdf", ".png", ".docx", ".xlsx", ".pptx", ".csv", ".json"],
     "categories": {
         "images":{ 

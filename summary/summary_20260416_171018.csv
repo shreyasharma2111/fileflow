@@ -1,0 +1,9 @@
+Filename,Status,Category,Destination
+1999-12-30_nye_photo.jpg,Valid,images,processed\images\1999-12-30_nye_photo.jpg
+2007-07-23_spring_analysis.txt,Valid,reports,processed\reports\2007-07-23_spring_analysis.txt
+2007-11-23_autumn_analysis.txt,Valid,reports,processed\reports\2007-11-23_autumn_analysis.txt
+badfiletest.txt,Invalid,Quarantine,quarantine\badfiletest.txt
+
+Total files processed: 4
+Valid files: 3
+Invalid files: 1

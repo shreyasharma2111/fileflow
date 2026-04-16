@@ -1,0 +1,6 @@
+Filename,Status,Category,Destination
+2020-10-09_test_file.doc,Invalid,Quarantine,quarantine\2020-10-09_test_file.doc
+
+Total files processed: 1
+Valid files: 0
+Invalid files: 1

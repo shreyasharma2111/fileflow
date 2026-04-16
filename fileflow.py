@@ -6,6 +6,7 @@ from logs import logaction
 from config_loader import loadconfig
 from classify import classify_file
 from summary import generate_summary
+from archive import archived_files
 
 input_folder = 'input'
 processed_folder = 'processed'
@@ -38,6 +39,7 @@ def processfiles(files, config):
     log_folder = config['log_folder']
     categoroies = config['categories']
     summary_folder = config['summary_folder']
+    from archive import archived_files
 
     valid = 0
     valid_files = []
@@ -109,6 +111,7 @@ def processfiles(files, config):
     print(f'Total files processed: {valid + invalid}')
     print(f'Valid files: {valid}')
     print(f'Invalid files: {invalid}')
+    print(f'Files archived: check archive folder')
     #generate summary report
     summary_file = generate_summary(valid_files, invalid_files, summary_folder)
 
@@ -125,4 +128,12 @@ if __name__ == '__main__':
     files = checkfolder(input_folder)
     print(f'Found {len(files)} files in {input_folder} folder.')
     processfiles(files, config)
-    print('Processing complete')
+    print(f'Processing complete')
+    print(f"Checking for old files to archive...")
+    archived_files(
+        config['processed_folder'], 
+        config['archive_folder'], 
+        config['log_folder'],
+        config['archive_after_days']
+        
+    )
