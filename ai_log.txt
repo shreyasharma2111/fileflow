@@ -9,3 +9,5 @@
 -Helped formulate a regualr expression to check validation of a file name: i want to use a regular expression to help with my code for validating the file name. what would be the expression to make sure the filename must begin with a date in the exact format YYYY-MM-DD followed by an underscore
 
 -Helped generate fake file names for testing purposes:can you please generate some fake file names based on the requirements above that will pass validation and some that will fail for me to test the code
+
+-Helped come up with an appropriate lis of keywords to be associated with a valid file:

@@ -1,0 +1,30 @@
+{
+    "input_folder": "input",
+    "processed_folder": "processed",
+    "quarantine_folder": "quarantine",
+    "archive_folder": "archive",
+    "log_folder": "logs",
+    "reports_folder": "reports",
+    "allowedextensions": [".jpg", ".txt", ".pdf", ".png", ".docx", ".xlsx", ".pptx", ".csv", ".json"],
+    "categories": {
+        "images":{ 
+            "extensions":[".jpg", ".png"],
+            "keywords": ["photo", "image", "picture"]
+        },
+        "reports":{ 
+            "extensions": [".txt", ".pdf", ".docx", ".xlsx", ".pptx", ".csv", ".json"],
+            "keywords": ["report", "analysis"]
+        },
+        "data":{ 
+            "extensions": [".csv", ".xlsx", ".json"],
+            "keywords": ["data", "information", "statistics"]
+        },
+        "general":{
+            "extensions": [],
+            "keywords": []
+        }
+    }
+
+}
+
+
