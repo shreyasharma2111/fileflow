@@ -1,0 +1,40 @@
+Filename,Status,Category,Destination
+2026-04-15_analysis_q1.xlsx,Valid,reports,processed\reports\2026-04-15_analysis_q1.xlsx
+2026-04-15_analysis_q2.xlsx,Valid,reports,processed\reports\2026-04-15_analysis_q2.xlsx
+2026-04-15_analysis_q3.xlsx,Valid,reports,processed\reports\2026-04-15_analysis_q3.xlsx
+2026-04-15_data_customers.csv,Valid,reports,processed\reports\2026-04-15_data_customers.csv
+2026-04-15_data_export.csv,Valid,reports,processed\reports\2026-04-15_data_export.csv
+2026-04-15_data_inventory.json,Valid,reports,processed\reports\2026-04-15_data_inventory.json
+2026-04-15_data_sales.csv,Valid,reports,processed\reports\2026-04-15_data_sales.csv
+2026-04-15_image_logo.png,Valid,images,processed\images\2026-04-15_image_logo.png
+2026-04-15_image_profile.png,Valid,images,processed\images\2026-04-15_image_profile.png
+2026-04-15_meeting_agenda.txt,Valid,reports,processed\reports\2026-04-15_meeting_agenda.txt
+2026-04-15_meeting_minutes.txt,Valid,reports,processed\reports\2026-04-15_meeting_minutes.txt
+2026-04-15_meeting_notes.txt,Valid,reports,processed\reports\2026-04-15_meeting_notes.txt
+2026-04-15_photo_holiday.jpg,Valid,images,processed\images\2026-04-15_photo_holiday.jpg
+2026-04-15_photo_office.jpg,Valid,images,processed\images\2026-04-15_photo_office.jpg
+2026-04-15_photo_team.jpg,Valid,images,processed\images\2026-04-15_photo_team.jpg
+2026-04-15_report_annual.pdf,Valid,reports,processed\reports\2026-04-15_report_annual.pdf
+2026-04-15_report_monthly.pdf,Valid,reports,processed\reports\2026-04-15_report_monthly.pdf
+2026-04-15_report_quarterly.pdf,Valid,reports,processed\reports\2026-04-15_report_quarterly.pdf
+2026-04-15_report_summary.pdf,Valid,reports,processed\reports\2026-04-15_report_summary.pdf
+2026-04-15_statistics_2026.json,Valid,reports,processed\reports\2026-04-15_statistics_2026.json
+2026_report.pdf,Invalid,Quarantine,quarantine\2026_report.pdf
+BadFile123.csv,Invalid,Quarantine,quarantine\BadFile123.csv
+DATA_EXPORT.json,Invalid,Quarantine,quarantine\DATA_EXPORT.json
+file with spaces.txt,Invalid,Quarantine,quarantine\file with spaces.txt
+image.PNG,Invalid,Quarantine,quarantine\image.PNG
+InvalidFile.pdf,Invalid,Quarantine,quarantine\InvalidFile.pdf
+INVOICE_FINAL.pdf,Invalid,Quarantine,quarantine\INVOICE_FINAL.pdf
+meeting notes.txt,Invalid,Quarantine,quarantine\meeting notes.txt
+My Report.docx,Invalid,Quarantine,quarantine\My Report.docx
+nodate_report.pdf,Invalid,Quarantine,quarantine\nodate_report.pdf
+Photo.JPG,Invalid,Quarantine,quarantine\Photo.JPG
+random_file.pdf,Invalid,Quarantine,quarantine\random_file.pdf
+report.PDF,Invalid,Quarantine,quarantine\report.PDF
+REPORT2026.xlsx,Invalid,Quarantine,quarantine\REPORT2026.xlsx
+UPPERCASE_FILE.csv,Invalid,Quarantine,quarantine\UPPERCASE_FILE.csv
+
+Total files processed: 35
+Valid files: 20
+Invalid files: 15
