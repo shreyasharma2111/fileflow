@@ -86,7 +86,7 @@ def processfiles(files, config):
             #check if name is valid
             if validatefilename(filename):
                 #classify file into category
-                category = classify_file(filename, categoroies)
+                category = classify_file(filename, categories)
                 #build new destination folder
                 destination_folder = os.path.join(processed_folder, category)
                 #duplicate file name check

@@ -2,3 +2,27 @@ __pycache__/
 *.pyc
 backup*/
 notes.txt
+fileflow/ 
+├── input/ - Drop files here to be processed 
+├── processed/ - Valid files sorted by category 
+│ ├── images/ 
+│ ├── reports/ 
+│ ├── data/ 
+│ └── general/ 
+├── quarantine/ - Invalid files are moved here 
+├── archive/ - Older processed files are moved here 
+├── logs/ - Log files are saved here 
+├── reports/ - Summary reports are saved here 
+|── fileflow.py - Main script that runs the tool 
+├── validator.py - Checks filenames against the naming rules 
+├── classify.py - Classifies files into categories 
+├── mover.py - Handles moving files between folders 
+├── logs.py - Records actions to the log file 
+├── summary.py - Generates the summary report 
+├── archive.py - Moves older files to the archive folder 
+├── config_loader.py - Loads settings from the config file 
+├── config.json - Settings file 
+├── Dockerfile - Instructions for building the Docker container 
+├── run_fileflow.sh - Runs the tool 
+├── reset_demo_data.sh - Resets all folders to a clean state 
+└── backup_reports.sh - Backs up the reports folder
