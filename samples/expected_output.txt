@@ -1,0 +1,61 @@
+## Expected result for each sample filename
+
+| Filename | Validation | Destination |
+|---|---|---|
+| `2025-12-31_report.pdf` | Valid | `processed/reports` |
+| `2024-01-01_image.jpg` | Valid | `processed/images` |
+| `2024-05-09_project_data.csv` | Valid | `processed/reports` |
+| `2024-04-16_weekly_summary.txt` | Valid | `processed/reports` |
+| `2024-03-12_financial_report.xlsx` | Valid | `processed/reports` |
+| `2024-02-28_presentation.pptx` | Valid | `processed/reports` |
+| `2024-06-15_inventory.json` | Valid | `processed/reports` |
+| `2024-07-20_team_photo.png` | Valid | `processed/images` |
+| `2024-08-05_device_log.txt` | Valid | `processed/reports` |
+| `2024-09-30_sales_analysis.docx` | Valid | `processed/reports` |
+| `24-12-31_report.pdf` | Invalid | quarantine |
+| `2024_12_31_report.pdf` | Invalid | quarantine |
+| 2024-12-31-Report.pdf | Invalid | quarantine |
+| `2024-12-31_report.PDF` | Invalid | quarantine |
+| `2024-12-31_report` | Invalid | quarantine |
+| `2024-12-31 report.pdf` | Invalid | quarantine |
+| 2024-12-31-report.pdf | Invalid | quarantine |
+| `2024-12-31_report!.pdf` | Invalid | quarantine |
+| `2024-12-31_report.exe` | Invalid | quarantine |
+| `2024-12-31_report.pdfx` | Invalid | quarantine |
+
+> Note: `2024-05-09_project_data.csv` and `2024-06-15_inventory.json` classify as reports because the category loop checks reports before `data`, and both extensions are present in reports.
+
+---
+
+## Expected console output
+
+Valid files:
+- `Valid file: 2025-12-31_report.pdf moved to reports`
+- `Valid file: 2024-01-01_image.jpg moved to images`
+- `Valid file: 2024-05-09_project_data.csv moved to reports`
+- `Valid file: 2024-04-16_weekly_summary.txt moved to reports`
+- `Valid file: 2024-03-12_financial_report.xlsx moved to reports`
+- `Valid file: 2024-02-28_presentation.pptx moved to reports`
+- `Valid file: 2024-06-15_inventory.json moved to reports`
+- `Valid file: 2024-07-20_team_photo.png moved to images`
+- `Valid file: 2024-08-05_device_log.txt moved to reports`
+- `Valid file: 2024-09-30_sales_analysis.docx moved to reports`
+
+Invalid files:
+- `Invalid file: 24-12-31_report.pdf moved to quarantine`
+- `Invalid file: 2024_12_31_report.pdf moved to quarantine`
+- `Invalid file: 2024-12-31-Report.pdf moved to quarantine`
+- `Invalid file: 2024-12-31_report.PDF moved to quarantine`
+- `Invalid file: 2024-12-31_report moved to quarantine`
+- `Invalid file: 2024-12-31 report.pdf moved to quarantine`
+- `Invalid file: 2024-12-31-report.pdf moved to quarantine`
+- `Invalid file: 2024-12-31_report!.pdf moved to quarantine`
+- `Invalid file: 2024-12-31_report.exe moved to quarantine`
+- `Invalid file: 2024-12-31_report.pdfx moved to quarantine`
+
+Final summary:
+- `---Summary---`
+- `Total files processed: 20`
+- `Valid files: 10`
+- `Invalid files: 10`
+- `Files archived: check archive folder`

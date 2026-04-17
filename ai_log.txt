@@ -120,7 +120,7 @@ ENTRY 10
 Tool used: GitHub Copilot, Chat GPT
 Purpose: Writing and improving documentation
 
-How it was used: AI was used to help structure the README.md and this AI usage log. In the prompts,
-Ai was asked to suggest an appropriate structure for each document, including which sections to include
-and in what order. 
+How it was used: AI was used to help structure the README.md, the AI usage log and the 
+expected_outcome.txt file. In the prompts,Ai was asked to suggest an appropriate structure for 
+each document, including which sections to include and in what order. 
 
