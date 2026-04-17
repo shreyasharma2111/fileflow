@@ -1,13 +1,120 @@
--Helped draft backlog items: You are an experienced software project manager. Create a simple list of tasks in order for a Python command-line tool called FileFlow that scans a folder, validates filenames, sorts valid files, quarantines invalid ones, logs actions and generates a report. Please present it as a numbered list, with one short sentence per task.
+This log records all instances where AI tools were used during the development of FileFlow, 
+including the prompts used and how these responses were applied.
 
--Helped draft acceptable criteria: You are an experienced software project manager. Write acceptance criteria for a FileFlow feature that validates filenames. Valid files must be lowercase, use underscores between words, start with a date in YYYY-MM-DD format and have a valid extention present. Please present it as a list with short sentences per requirement
+========================================
 
--Helped draft possible file classification rules: You are an experienced software project manager. Suggest file classification rules for FileFlow. Files will be invoices, reports, meeting notes, images and exports, identified by keywords in their filename or extentions. Please present it as a simple table with three colums: File Type, Keywords and extentions
+ENTRY 1
+Tool used: GitHub Copilot
+Purpose: Draft Prject backlog
 
--Helped draft a starter project structure: You are an experienced software project manager. Suggest a starter Python project structure for FileFlow. Include only the essesntial files needed to begin building. present it as a folder tree, with a short sentece describing what each file does
 
--Helped formulate a regualr expression to check validation of a file name: i want to use a regular expression to help with my code for validating the file name. what would be the expression to make sure the filename must begin with a date in the exact format YYYY-MM-DD followed by an underscore
+Prompt: You are an experienced software project manager. Create a simple list of tasks in order
+ for a Python command-line tool called FileFlow that scans a folder, validates filenames, sorts
+valid files and quarantines invalid files, logs actions and generates a report. Present it as a 
+numbered list, with one short sentence per task.
 
--Helped generate fake file names for testing purposes:can you please generate some fake file names based on the requirements above that will pass validation and some that will fail for me to test the code
+How it was used: The responses were used to create an ordered list of development tasks which 
+helped structure the project from Day 1
+========================================
 
--Helped come up with an appropriate lis of keywords to be associated with a valid file:
+ENTRY 2
+Tool used: GitHub Copilot
+Purpose: Draft acceptance criteria
+
+Prompt: You are an experienced software project manager. Write acceptance criteria for a FileFlow 
+feature that validates filenames. Valid names will be lowercase, use underscores between words, 
+start with a date in YYYY-MM-DD format and have a valid extension present. Present it as a list 
+with short sentences per requirement.
+
+How it was used: The response was used to define clear requirements for the filename validation
+feature, making it easier to know when the feature was complete.
+
+========================================
+
+ENTRY 3
+Tool used: GitHub Copilot
+Purpose: Draft file classification rules
+
+Prompt: You are an experienced software project manager. Suggest file classification rules
+ for FileFlow. Files will be reports, meeting notes, images or statistical data, identified 
+ by keywords in their filename or extensions. Present it as a simple table with three columns: 
+ File Type, Keywords and Extensions.
+
+How it was used: The response was used to define the classification rules that were later 
+stored in config.json and used by classify.py to sort files into category subfolders.
+
+========================================
+
+ENTRY 4
+Tool used: GitHub Copilot
+Purpose: Draft starter project structure
+
+Prompt: You are an experienced software project manager. Suggest a starter Python project 
+structure for FileFlow. Include only the essential files needed to begin building. Present 
+it as a folder tree, with a short sentence describing what each file does.
+
+How it was used: The response was used to plan the Python files needed before any code was 
+written, giving the project a clean and organised structure from the start.
+
+========================================
+
+ENTRY 5
+Tool used: GitHub Copilot
+Purpose: Help write a regular expression for filename validation
+
+Prompt: You are an experienced software project manager. Generate a regular expression for 
+validating filenames in a Python tool. The filenames must begin with a date in the exact 
+format YYYY-MM-DD followed by an underscore. The names must also contain only lowercase 
+letters and must end with a valid file extention.
+
+How it was used: The response was used in the validator.py file to check the filenames against
+the existing criteria.
+
+========================================
+
+ENTRY 6
+Tool used: GitHub Copilot
+Purpose: Generate test filenames
+
+Prompt: You are an experienced software project manager. Generate a list of sample filenames 
+for testing a file validation tool. Some filenames should pass validation checks and others 
+should fail, covering a range of mistakes such as spaces, uppercase letters, missing dates and
+invalid extentions. Please present these names in two lists- valid and invalid.
+
+How it was used: The responses were uses as sample files to test the tool throughout development.
+
+========================================
+
+ENTRY 7
+Tool used: GitHub Copilot
+Purpose: Generate a list of keywords for classification
+
+Prompt: You are an experienced software project manager. Suggest a list of keywords that could
+be used to classify files in categories for a Python file organiser tool. Categories include 
+images, reports and data. Any other files will go into the general folder. Present this as a table 
+with two columns: Category and Keywords.
+
+How it was used: The responses with used to populate the keywords section of the config.json file, 
+which is used by classify.py to sort files into the correct subcategories.
+
+========================================
+
+ENTRY 8
+Tool used: GitHub Copilot, Claude AI, Chat GPT
+Purpose: Debugging assisstance
+
+How it was used: For this task, AI was used quite a lot when the code was not running. Sometimes 
+Copiolot would fix the code, other times it would provide an explanation as to what was going on 
+so that the issue could be fixed manually. Prompts differed depending on the problem but often 
+started with "Please help me fix..."
+
+========================================
+
+ENTRY 9
+Tool used: GitHub Copilot, Chat GPT
+Purpose: Writing and improving documentation
+
+How it was used: AI was used to help structure the README.md and this AI usage log. In the prompts,
+Ai was asked to suggest an appropriate structure for each document, including which sections to include
+and in what order. 
+
