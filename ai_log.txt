@@ -7,7 +7,6 @@ ENTRY 1
 Tool used: GitHub Copilot
 Purpose: Draft Prject backlog
 
-
 Prompt: You are an experienced software project manager. Create a simple list of tasks in order
  for a Python command-line tool called FileFlow that scans a folder, validates filenames, sorts
 valid files and quarantines invalid files, logs actions and generates a report. Present it as a 
@@ -61,6 +60,12 @@ written, giving the project a clean and organised structure from the start.
 
 ENTRY 5
 Tool used: GitHub Copilot
+Purpose: Automatically filling in comments 
+
+========================================
+
+ENTRY 6
+Tool used: GitHub Copilot
 Purpose: Help write a regular expression for filename validation
 
 Prompt: You are an experienced software project manager. Generate a regular expression for 
@@ -73,7 +78,7 @@ the existing criteria.
 
 ========================================
 
-ENTRY 6
+ENTRY 7
 Tool used: GitHub Copilot
 Purpose: Generate test filenames
 
@@ -86,7 +91,7 @@ How it was used: The responses were uses as sample files to test the tool throug
 
 ========================================
 
-ENTRY 7
+ENTRY 8
 Tool used: GitHub Copilot
 Purpose: Generate a list of keywords for classification
 
@@ -100,7 +105,7 @@ which is used by classify.py to sort files into the correct subcategories.
 
 ========================================
 
-ENTRY 8
+ENTRY 9
 Tool used: GitHub Copilot, Claude AI, Chat GPT
 Purpose: Debugging assisstance
 
@@ -111,7 +116,7 @@ started with "Please help me fix..."
 
 ========================================
 
-ENTRY 9
+ENTRY 10
 Tool used: GitHub Copilot, Chat GPT
 Purpose: Writing and improving documentation
 
