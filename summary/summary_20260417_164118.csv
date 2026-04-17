@@ -1,0 +1,25 @@
+Filename,Status,Category,Destination
+2024-01-01_image.jpg,Valid,images,processed\images\2024-01-01_image.jpg
+2024-02-28_presentation.pptx,Valid,reports,processed\reports\2024-02-28_presentation.pptx
+2024-03-12_financial_report.xlsx,Valid,reports,processed\reports\2024-03-12_financial_report.xlsx
+2024-04-16_weekly_summary.txt,Valid,reports,processed\reports\2024-04-16_weekly_summary.txt
+2024-05-09_project_data.csv,Valid,reports,processed\reports\2024-05-09_project_data.csv
+2024-06-15_inventory.json,Valid,reports,processed\reports\2024-06-15_inventory.json
+2024-07-20_team_photo.png,Valid,images,processed\images\2024-07-20_team_photo.png
+2024-08-05_device_log.txt,Valid,reports,processed\reports\2024-08-05_device_log.txt
+2024-09-30_sales_analysis.docx,Valid,reports,processed\reports\2024-09-30_sales_analysis.docx
+2025-12-31_report.pdf,Valid,reports,processed\reports\2025-12-31_report.pdf
+2024-12-31,Invalid,Quarantine,quarantine\2024-12-31
+2024-12-31-report.pdf,Invalid,Quarantine,quarantine\2024-12-31-report.pdf
+2024-12-31_report,Invalid,Quarantine,quarantine\2024-12-31_report
+2024-12-31_report.exe,Invalid,Quarantine,quarantine\2024-12-31_report.exe
+2024-12-31_report.PDF,Invalid,Quarantine,quarantine\2024-12-31_report.PDF
+2024-12-31_report.pdfx,Invalid,Quarantine,quarantine\2024-12-31_report.pdfx
+2024_12_31_report.pdf,Invalid,Quarantine,quarantine\2024_12_31_report.pdf
+24-12-31_report.pdf,Invalid,Quarantine,quarantine\24-12-31_report.pdf
+expected_output.txt,Invalid,Quarantine,quarantine\expected_output.txt
+report.pdf,Invalid,Quarantine,quarantine\report.pdf
+
+Total files processed: 20
+Valid files: 10
+Invalid files: 10
