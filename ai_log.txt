@@ -15,6 +15,7 @@ numbered list, with one short sentence per task.
 
 How it was used: The responses were used to create an ordered list of development tasks which 
 helped structure the project from Day 1
+
 ========================================
 
 ENTRY 2
