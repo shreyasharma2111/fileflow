@@ -8,11 +8,41 @@ from classify import classify_file
 from summary import generate_summary
 from archive import archived_files
 from datetime import datetime
+import argparse
 
 input_folder = 'input'
 processed_folder = 'processed'
 quarantine_folder = 'quarantine'
 log_folder = 'logs'
+
+def parse_args():
+    #creating description of the tool
+    parser = argparse.ArgumentParser(
+    description= 'FileFlow- A command line file organiser tool'
+    )
+    #adding an input argument
+    parser.add_argument(
+        '--input', 
+        type=str,  
+        help='Path to the input folder',
+        default=None
+    )
+    #addinjg a config argument
+    parser.add_argument(
+        '--config', 
+        type=str,  
+        help='Path to the config file',
+        default='config.json'
+    )
+    #adding an archive argument
+    parser.add_argument(
+        '--days', 
+        type=int,  
+        help='Number of days before the files are archived',
+        default=None
+    )
+    
+    return parser.parse_args()  
 
 def checkfolder(folder):
     #check if folder exists
@@ -116,7 +146,12 @@ def processfiles(files, config):
     #generate summary report
     summary_file = generate_summary(valid_files, invalid_files, summary_folder)
 
+
+
 if __name__ == '__main__':
+
+    args = parse_args()
+
     #load config
     try:
         config = loadconfig()
@@ -125,7 +160,18 @@ if __name__ == '__main__':
         print(f"Error loading config: {str(e)}")
         exit()
 
-    input_folder = config.get('input_folder')
+    if args.input:
+        input_folder = args.input
+        print(f"Using input folder from command line: {input_folder}")
+    else:
+        input_folder = config.get('input_folder')
+
+    if args.days:
+        archived_files = args.days
+        print(f"Using archive days from command line: {archived_files} days")
+    else:
+        archived_files = config('archive_after_days')
+
 
     #make it easier to read logs
     log_reader(config['log_folder'], message=f"New fileflow run started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -134,13 +180,20 @@ if __name__ == '__main__':
     print(f'Found {len(files)} files in {input_folder} folder.')
     processfiles(files, config)
     print(f'Processing complete')
+
+    archived_files(
+        config['processed_folder'], 
+        config['archive_folder'], 
+        archived_files,
+        config['log_folder'],
+    )
+
     print(f"Checking for old files to archive...")
     archived_files(
         config['processed_folder'], 
         config['archive_folder'], 
         config['log_folder'],
-        config['archive_after_days']
-        
+        config['archive_after_days']  
     )
 
     log_reader(config['log_folder'], message=f"Fileflow run completed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
