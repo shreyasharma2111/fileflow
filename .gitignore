@@ -26,3 +26,4 @@ fileflow/
 ├── run_fileflow.sh - Runs the tool 
 ├── reset_demo_data.sh - Resets all folders to a clean state 
 └── backup_reports.sh - Backs up the reports folder
+
