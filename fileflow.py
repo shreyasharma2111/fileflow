@@ -68,7 +68,7 @@ def processfiles(files, config):
     processed_folder = config['processed_folder']
     quarantine_folder = config['quarantine_folder']
     log_folder = config['log_folder']
-    categoroies = config['categories']
+    categories = config['categories']
     summary_folder = config['summary_folder']
     from archive import archived_files
 
@@ -92,8 +92,8 @@ def processfiles(files, config):
                 #duplicate file name check
                 final_destination = os.path.join(destination_folder, filename)
                 if os.path.exists(final_destination):
-                    base, ext = os.path.splittext(filename)
-                    count = 1
+                    base, ext = os.path.splitext(filename)
+                    counter = 1
                     while os.path.exists(os.path.join(destination_folder, f"{base}_{counter}{ext}")):
                         counter += 1
                     filename = f"{base}_{counter}{ext}"
@@ -164,13 +164,13 @@ if __name__ == '__main__':
         input_folder = args.input
         print(f"Using input folder from command line: {input_folder}")
     else:
-        input_folder = config.get('input_folder')
+        input_folder = config['input_folder']
 
     if args.days:
-        archived_files = args.days
-        print(f"Using archive days from command line: {archived_files} days")
+        archive_days = args.days
+        print(f"Using archive days from command line: {archive_days} days")
     else:
-        archived_files = config('archive_after_days')
+        archive_days = config['archive_after_days']
 
 
     #make it easier to read logs
@@ -192,8 +192,8 @@ if __name__ == '__main__':
     archived_files(
         config['processed_folder'], 
         config['archive_folder'], 
-        config['log_folder'],
-        config['archive_after_days']  
+        archive_days,
+        config['log_folder'],  
     )
 
     log_reader(config['log_folder'], message=f"Fileflow run completed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
